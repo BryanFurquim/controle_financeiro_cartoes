@@ -1,0 +1,80 @@
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+  padding: 16px 24px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.empresa {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #444446;
+}
+
+.nomeEmpresa {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.label {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.nomeEmpresa
+ strong {
+  color: #111827;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.usuario {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.perfil {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f1e8b2;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.userInfo strong {
+  color: #111827;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.setor {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.UserType {
+  padding: 5px 10px;
+  border-radius: 6px;
+  background-color: #3e8ffa70;
+  color: #002df5;
+  font-size: 12px;
+  font-weight: 750;
+}
