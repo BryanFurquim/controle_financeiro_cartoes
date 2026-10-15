@@ -8,7 +8,6 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.empresa}>
         <Building2 size={22} />
-
         <div className={styles.nomeEmpresa}>
           <span className={styles.label}>Unidade / Empresa</span>
           <strong>Matriz São Paulo</strong>
