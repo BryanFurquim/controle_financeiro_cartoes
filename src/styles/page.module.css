@@ -1,0 +1,208 @@
+.loginPage {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+}
+
+.loginCard {
+  width: 100%;
+  max-width: 430px;
+  background-color: #e7eaeb6e;
+}
+
+.loginHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 20px;
+}
+
+.logo {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  color: #ffffff;
+  background-color: #1338b3;
+  border-radius: 7px;
+}
+
+.titulo {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 9px;
+  margin-bottom: 8px;
+  color: #2445b5;
+  background-color: #eef1ff;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.greenDot {
+  width: 6px;
+  height: 6px;
+  background-color: #16a34a;
+  border-radius: 50%;
+}
+
+.loginHeader h1 {
+  font-size: 19px;
+}
+
+.loginHeader p {
+  margin-top: 7px;
+  color: #72788a;
+  font-size: 12px;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px 20px;
+}
+
+.tituloInput {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.tituloInput label {
+  color: #172033;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 42px;
+  padding: 0 12px;
+  color: #858ba0;
+  background-color: #f1f3ff;
+  border-radius: 5px;
+  transition:
+    box-shadow 0.1s ,
+    border-color .1s
+}
+.input:hover{
+  border: 1px solid rgb(173, 173, 173);
+}
+.input:focus-within {
+  box-shadow: 3 3 3 3px rgba(36, 70, 181, 0.219);
+}
+
+.input input {
+  width: 100%;
+  color: #172033;
+  border: none;
+  outline: none;
+  font: inherit;
+  font-size: 12px;
+}
+
+.input input::placeholder {
+  color: #8e8f91;
+}
+
+.password {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 4px;
+  color: #777e91;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.password:hover {
+  color: #2445b5;
+}
+
+.salvarAcesso {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #555c6e;
+  font-size: 11px;
+  cursor: pointer;
+}
+.salvarAcesso:hover{
+  color: #2445b5;
+}
+.salvarAcesso input {
+  width: 14px;
+  height: 14px;
+  margin: 0;
+  accent-color: #2445b5;
+  cursor: pointer;
+}
+.btnEntrar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 43px;
+  color: #ffffff;
+  background-color: #2445b5;
+  border: none;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s , transform .3s ,
+}
+
+.btnEntrar:hover {
+  background-color: #1c3795;
+}
+
+.recuperarSenha {
+  display: block;
+  margin: 0 auto;
+  color: #646b7c;
+  padding-bottom: 10px;
+  border: none;
+  font-size: 11px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.recuperarSenha:hover {
+  color: #2445b5;
+  text-decoration: underline;
+}
+
+.protocolo {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 39px;
+  padding: 10px 14px;
+  color: #60687b;
+  font-size: 10px;
+}
+
+.protocolo svg {
+  color: #747d94;
+}
+
+.footer {
+  margin: 18px 0 0;
+  color: #777d8e;
+  font-size: 11px;
+  text-align: center;
+}

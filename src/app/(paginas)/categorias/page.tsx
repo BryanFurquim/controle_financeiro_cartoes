@@ -1,4 +1,4 @@
 
-export default function categorias(){
+export default function Categorias(){
     
 }
