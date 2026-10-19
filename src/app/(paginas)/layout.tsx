@@ -1,7 +1,7 @@
 import Header from "../../components/header"
 import Sidebar from "../../components/sidebar"
 import type { Metadata } from "next";
-import "../globals.css";
+import styles from "../../styles/paginas.module.css";
 
 export const metadata: Metadata = {
   title: "Controle Financeiro",
@@ -14,13 +14,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
-      <body>
-        <Header></Header>
-        <Sidebar></Sidebar>
-      {children}
-        
-      </body>
-    </html>
+    <div className={styles.layout}>
+      <Sidebar />
+
+      <div className={styles.areaPrincipal}>
+        <Header />
+        <main className={styles.conteudo}>
+          {children}
+        </main>
+      </div>
+    </div>
+    
+     
+   
   );
 }

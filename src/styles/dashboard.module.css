@@ -1,0 +1,248 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  min-width: 0;
+  padding: 24px 28px 40px;
+  color: #0f172a;
+  font-size: 13px;
+}
+
+.dashboard button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 6px;
+  color: #64748b;
+  font-size: 11px;
+}
+
+.consolidado {
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: #dbe4ff;
+  color: #0c2a8a;
+  font-weight: 600;
+}
+
+.dot {
+  color: #6e6e6e73;
+}
+
+.titulo {
+  color: #0f172a;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.subtitulo {
+  margin-top: 4px;
+  color: #64748b;
+}
+
+.acoes {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.exportar,
+.lancamento {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 36px;
+  padding: 0 14px;
+  border: 1px solid #e5e9f2;
+  border-radius: 8px;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  white-space: nowrap;
+}
+
+.exportar {
+  background: #ffffff;
+  color: #0f172a;
+}
+
+.lancamento {
+  border-color: #1c3faa;
+  background: #1c3faa;
+  color: #ffffff;
+}
+
+.exportar:hover {
+  background: #eef1fb;
+}
+
+.lancamento:hover {
+  background: #0c2a8a;
+}
+
+.exportar:focus-visible,
+.lancamento:focus-visible,
+.botaoDetalhes:focus-visible,
+.linkTodosLancamentos:focus-visible,
+.linkComprovante:focus-visible {
+  outline: 2px solid #1c3faa;
+  outline-offset: 2px;
+}
+
+.indicadores {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.indicador {
+  padding: 15px 20px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 2px 2px 2px rgb(15 23 42 / 6%);
+}
+
+.cabecalhoIndicador {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.iconeIndicador {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 16px;
+}
+
+.indicadorLimite .iconeIndicador {
+  background: #e9edff;
+  color: #1239a8;
+}
+
+.indicadorGasto .iconeIndicador {
+  background: #ffebeb;
+  color: #dc2626;
+}
+
+.indicadorSaldo .iconeIndicador {
+  background: #c9fbd5;
+  color: #08783e;
+}
+
+.indicadorCartoes .iconeIndicador {
+  background: #e9edff;
+  color: #263c9b;
+}
+
+.valorIndicador {
+  margin: 10px 0 12px;
+  color: #0f172a;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.valorIndicador small {
+  margin-left: 6px;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.rodapeIndicador {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 6px;
+  color: #64748b;
+  font-size: 10.5px;
+}
+
+.etiquetaIndicador {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.barraProgresso {
+  height: 5px;
+  border-radius: 999px;
+  background: #dcdcdf;
+}
+
+.barraProgresso span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.indicadorLimite .barraProgresso span {
+  background: #0c2a8a;
+}
+
+.indicadorGasto .valorIndicador {
+  color: #c81e1e;
+}
+
+.indicadorGasto .iconeIndicador,
+.indicadorGasto .etiquetaIndicador {
+  background: #fde8e8;
+  color: #c81e1e;
+}
+
+.indicadorGasto .barraProgresso span {
+  background: #c81e1e;
+}
+
+.indicadorSaldo .valorIndicador {
+  color: #15803d;
+}
+
+.indicadorSaldo .iconeIndicador,
+.indicadorSaldo .etiquetaIndicador {
+  background: #e3f6ea;
+  color: #15803d;
+}
+
+.indicadorSaldo .barraProgresso span {
+  background: #15803d;
+}
+
+.indicadorCartoes .iconeIndicador {
+  background: #eef1fb;
+  color: #1c3faa;
+}
+
+.indicadorCartoes .etiquetaIndicador {
+  background: #fde8e8;
+  color: #c81e1e;
+}
+
+.indicadorCartoes .barraProgresso span {
+  background: #0f172a;
+}

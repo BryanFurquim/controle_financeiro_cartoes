@@ -40,7 +40,7 @@ export default function Sidebar() {
         <aside className={styles.sidebar}>
             <div className={styles.logo}>
                 <div className={styles.logoIcon}>
-                    <Image src="/logo.png"alt="Logo Controle Gastos"width={170}height={45}/>
+                    <Image src="/logo.png"alt="Logo Controle Gastos"width={180}height={55}/>
                 </div>
             </div>
 

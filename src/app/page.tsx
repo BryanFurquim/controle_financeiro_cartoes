@@ -42,7 +42,7 @@ export default function Login() {
 
             <div className={styles.input} >
               <Mail size={20} />
-              <input id="email" type="email" placeholder="exemplo@empresa.com.br"autoComplete="username"required
+              <input id="email" type="email" placeholder="exemplo@empresa.com.br" required
               />
             </div>
 
