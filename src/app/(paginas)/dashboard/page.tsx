@@ -1,5 +1,6 @@
 import styles from "../../../styles/dashboard.module.css"
-import {ArrowUp, CircleCheck, CreditCard, Download, LucideIcon, LucidePiggyBank, PiggyBank, PiggyBankIcon, Plus, TrendingUp, Wallet} from "lucide-react"
+import {ArrowUp, CircleCheck, CreditCard, Download, LucideIcon, PiggyBank, Plus, TrendingUp, Wallet} from "lucide-react"
+import CartaoFinanceiro from "../../../components/CartaoFinanceiro";
 
 type TipoIndicador = "limite" | "gasto" | "saldo" | "cartoes";
 
@@ -57,7 +58,74 @@ const indicadores: IndicadorFinanceiro[] = [
         percentual: 50,
     }
 ]
+
+type Cartao = {
+    id: string,
+    emUso: boolean;
+    bandeira: "mastercard" | "visa";
+    final: string;
+    validade: string;
+    responsavel: string;
+    departamento: string;
+    limite: number;
+    gasto: number;
+    retiradoPor?: string;
+
+}
+
+const cartoesCorporativos: Cartao[] = [
+    {
+        id: "cartão 4587",
+        emUso: false,
+        bandeira: "mastercard",
+        final:"4587",
+        validade: "12/28",
+        responsavel: "Eduardo Amaral",
+        departamento: "Compras",
+        limite: 5000,
+        gasto: 1250,
+    },
+    {
+        id: "cartão 8912",
+        emUso: true,
+        bandeira: "visa",
+        final:"8912",
+        validade: "09/27",
+        responsavel: "Mariana Costa",
+        departamento: "Marketing",
+        limite: 4000,
+        gasto: 1620,
+        retiradoPor: "João Silva"
+    },
+    {
+        id: "cartão 3140",
+        emUso: true,
+        bandeira: "visa",
+        final:"3140",
+        validade: "04/29",
+        responsavel: "Carlos Henrique",
+        departamento: "TI",
+        limite: 3500,
+        gasto: 580,
+        retiradoPor: "Felipe Souza"
+    },
+    {
+        id: "cartão 7621",
+        emUso: false,
+        bandeira: "mastercard",
+        final:"7621",
+        validade: "01/30",
+        responsavel: "Beatriz Mendes",
+        departamento: "Diretora Operacional",
+        limite: 2500,
+        gasto: 0,
+    },
+]
 export default function Dashboard(){
+
+    const cartoesEmUso = cartoesCorporativos.filter((cartao)=> cartao.emUso).length
+    const cartoesDisponiveis = cartoesCorporativos.length - cartoesEmUso
+
     return(
         
         <div className={styles.dashboard}>           
@@ -112,11 +180,25 @@ export default function Dashboard(){
                     </div>
                 </article>
                 )
-            })}
-           
-            
+            })}            
         </section>
+
+            <section className={styles.cartoes}>
+
+                <div className={styles.cabecalhoCartoes}>
+                    <h2>Cartões corporativos <span className={styles.quantidadeCartoes}> {cartoesCorporativos.length} Ativos</span></h2>
+                    <p className={styles.uso}> <span className={styles.legendaDisponiveis}> {cartoesDisponiveis}   Disponiveis</span> <span className={styles.legendaEmUso}>{cartoesEmUso} Em uso</span></p>
+                </div>
+                <div className={styles.listaCartoes}>
+                    {cartoesCorporativos.map((cartao)=>(
+                        <CartaoFinanceiro key={cartao.id} cartao={cartao}/>
+                    ))}
+                </div>
+            </section>
+
+            
+
+
         </div>
-        
     )
 }

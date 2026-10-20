@@ -64,7 +64,7 @@ export default function Login() {
             Lembrar acesso neste computador
           </label>
 
-          <button type="submit" className={styles.btnEntrar}>
+          <button type="submit" className={styles.btnEntrar}>Entrar
             <LogIn size={16} />
           </button>
         </form>

@@ -246,3 +246,62 @@
 .indicadorCartoes .barraProgresso span {
   background: #0f172a;
 }
+
+.cabecalhoCartoes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+} 
+
+.cabecalhoCartoes h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #0f172a;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.quantidadeCartoes {
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #dbe4ff;
+  color: #0c2a8a;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.uso {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  color: #64748b;
+  font-size: 10px;
+}
+
+.legendaDisponiveis,
+.legendaEmUso {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legendaDisponiveis::before, .legendaEmUso::before {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #15803d;
+  content: "";
+}
+
+.legendaEmUso::before {
+  background: #c81e1e;
+}
+
+.listaCartoes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
