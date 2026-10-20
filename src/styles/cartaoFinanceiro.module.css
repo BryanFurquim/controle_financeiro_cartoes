@@ -62,7 +62,7 @@
   justify-content: space-between;
   gap: 14px;
   min-height: 122px;
-  padding: 12px;
+  padding: 12px 0px 0px 12px;
   overflow: hidden;
   border-radius: 6px;
   color: #ffffff;
@@ -113,6 +113,7 @@
   color: rgba(255, 255, 255, 0.8);
   font-size: 8px;
   letter-spacing: 1px;
+  padding-right: 12px;
 }
 
 .numeroCartao {
@@ -132,10 +133,24 @@
 .rodapeFrenteCartao span:first-child {
   font-size: 7px;
   letter-spacing: 1px;
+  padding-bottom: 12px;
 }
 
 .rodapeFrenteCartao span:last-child {
   font-size: 8px;
+}
+
+.designCard{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.062);
+  width: 25%;
+  height: 250%;
+  padding: 0;
+  margin: 0;
+  border-radius: 12px 0px 0px 0px;
+  
 }
 
 .informacoesCartao {

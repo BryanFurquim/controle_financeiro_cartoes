@@ -50,7 +50,7 @@ export default function CartaoFinanceiro({cartao}: CartaoFinanceiroProps) {
 
         <div className={styles.rodapeFrenteCartao}>
           <span>{cartao.responsavel.toUpperCase()}</span>
-          <span>{cartao.validade}</span>
+          <div className={styles.designCard}><span>{cartao.validade}</span></div>
         </div>  
 
       </div>
