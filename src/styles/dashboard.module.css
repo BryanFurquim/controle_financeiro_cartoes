@@ -71,7 +71,7 @@
   padding: 0 14px;
   border: 1px solid #e5e9f2;
   border-radius: 8px;
-  font-size: 12px !important;
+  font-size: 12px ;
   font-weight: 600 !important;
   white-space: nowrap;
 }
@@ -160,6 +160,8 @@
   margin: 10px 0 12px;
   color: #0f172a;
   font-size: 28px;
+  overflow-wrap: break-word;
+  text-overflow: ellipsis;
   font-weight: 700;
 }
 
@@ -304,4 +306,187 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
+}
+
+.tabelaLancamentos {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #edf0f6;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.cabecalhoTabela {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 20px;
+}
+
+.iconeLancamentos {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: #e3f6ea;
+  color: #15803d;
+}
+
+.informacoesTabela h2 {
+  color: #0f172ae1;
+  font-size: 14px;
+}
+
+.informacoesTabela p {
+  margin-top: 3px ;
+  color: #64748b;
+  font-size: 11px;
+}
+
+.linkTodosLancamentos {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+  color: #0c2a8a;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: .2s ease;
+}
+
+.linkTodosLancamentos:hover {
+  background-color: #0477fa;
+  color: white;
+  padding: 7px 10px;
+  border-radius: 12px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.areaRolagemTabela {
+  overflow-x: auto;
+  padding: 0 14px;
+}
+
+.conteudoTabela {
+  min-width: 860px;
+}
+
+.linhaTabela {
+  display: grid;
+  grid-template-columns: 1.05fr 2.3fr 1.6fr 1.4fr 1.3fr 0.9fr;
+  align-items: center;
+  padding: 10px 16px;
+  border-bottom: 1px solid #e5e9f2;
+}
+
+.linhaTabela strong {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.linhaTabela small {
+  display: block;
+  margin-top: 2px;
+  color: #64748b;
+  font-size: 10px;
+}
+
+.cabecalhoColunas {
+  padding: 12px;
+  border-bottom: none;
+  background: #f1f4fb;
+  color: #64748b;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+}
+
+.alinhamentoDireita {
+  text-align: right;
+}
+
+.estabelecimentoLancamento {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.iconeEstabelecimento {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: #eef1fb;
+  color: #1c3faa;
+}
+
+.cartaoLancamento {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: monospace;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.indicadorCartaoVisa,
+.indicadorCartaoMastercard {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #c81e1e;
+}
+
+.indicadorCartaoMastercard {
+  background: #1c3faa;
+}
+
+.linkComprovante {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px;
+  border-radius: 4px;
+  background: #eef1fb;
+  color: #0c2a8a;
+  font-family: monospace;
+  font-size: 10px;
+  text-decoration: none;
+}
+
+.linkComprovante:hover {
+  background: #c6d2fa;
+}
+
+.valorLancamento {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.rodapeTabela {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 20px 16px;
+  color: #64748b;
+  font-size: 10px;
+}
+
+.statusAuditoria {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.statusAuditoria::before {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #15803d;
+  content: "";
 }

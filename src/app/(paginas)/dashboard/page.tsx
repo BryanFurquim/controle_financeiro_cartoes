@@ -1,9 +1,16 @@
+"use client"
 import styles from "../../../styles/dashboard.module.css"
-import {ArrowUp, CircleCheck, CreditCard, Download, LucideIcon, PiggyBank, Plus, TrendingUp, Wallet} from "lucide-react"
+import {FileText, ImageIcon, Server, Fuel, ArrowRight, ArrowUp, CircleCheck, CreditCard, Download, LucideIcon, PiggyBank, Plus, TrendingUp, Wallet, Utensils, Printer} from "lucide-react"
 import CartaoFinanceiro from "../../../components/CartaoFinanceiro";
-
+import Link from "next/link"
 type TipoIndicador = "limite" | "gasto" | "saldo" | "cartoes";
 
+function formatarMoeda(valor: number): string{
+    return valor.toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL"
+    })
+}
 type IndicadorFinanceiro = {
     titulo: string;
     valor: string;
@@ -121,6 +128,81 @@ const cartoesCorporativos: Cartao[] = [
         gasto: 0,
     },
 ]
+
+type LancamentoFinanceiro = {
+    id: string;
+    data: string;
+    estabelecimento: string;
+    descricao: string;
+    icone: LucideIcon;
+    bandeira: "mastercard" | "visa";
+    finalCartao: string;
+    portador: string;
+    centro: string;
+    comprovante: string;
+    tipoComprovante: "pdf" | "imagem";
+    valor: number;
+}
+
+const lancamentosRecentes: LancamentoFinanceiro[] = [
+    {
+        id: "LNC-8921",
+        data: "24/10/2024",
+        estabelecimento: "Posto Ipiranga Rodoanel",
+        descricao: "Combustível frota regional",
+        icone: Fuel,
+        bandeira: "mastercard",
+        finalCartao: "4587",
+        portador: "Eduardo Amaral",
+        centro: "compras",
+        comprovante: "NFCe_8921.pdf",
+        tipoComprovante: "pdf",
+        valor: 200,
+    },
+    {
+        id: "LNC-8918",
+        data: "23/10/2024",
+        estabelecimento: "Restaurante Fogo Nativo",
+        descricao: "Almoço executivo com parceiro de mídia",
+        icone: Utensils,
+        bandeira: "visa",
+        finalCartao: "8912",
+        portador: "João Silva",
+        centro: "Marketing",
+        comprovante: "Cupom_452.jpg",
+        tipoComprovante: "imagem",
+        valor: 412.5,
+    },
+    {
+        id: "LNC-8910",
+        data: "22/10/2024",
+        estabelecimento: "Amazon Web Services BR",
+        descricao: "Créditos de infraestrutura de desenvolvimento",
+        icone: Server,
+        bandeira: "visa",
+        finalCartao: "3140",
+        portador: "Felipe Souza",
+        centro: "TI",
+        comprovante: "AWS_lnv_10.pdf",
+        tipoComprovante: "pdf",
+        valor: 580,
+    },
+    {
+        id: "LNC-8902",
+        data: "21/10/2024",
+        estabelecimento: "Kalunga Papelaria Corp",
+        descricao: "Suprimentos de escritório e impressão de crachás",
+        icone: Printer,
+        bandeira: "mastercard",
+        finalCartao: "4587",
+        portador: "Eduardo Amaral",
+        centro: "compras",
+        comprovante: "DANFE_0029.pdf",
+        tipoComprovante: "pdf",
+        valor: 970,
+    }
+]
+
 export default function Dashboard(){
 
     const cartoesEmUso = cartoesCorporativos.filter((cartao)=> cartao.emUso).length
@@ -196,9 +278,61 @@ export default function Dashboard(){
                 </div>
             </section>
 
-            
+            <section className={styles.tabelaLançamentos}>
 
+                    <header className={styles.cabecalhoTabela}>
+                        <span className={styles.iconeLancamentos}><CircleCheck size={16}/></span>
 
+                        <div className={styles.informacoesTabela}>
+                            <h2>Ultimos Lançamentos aprovados</h2>
+                            <p>Despesas validadas pela controladoria com comprovantes anexos</p>
+                        </div>
+
+                        <Link href="/lancamentos" className={styles.linkTodosLancamentos}>Acessar todos os lançamentos <ArrowRight size={13}/></Link>
+                    </header>
+
+                    <div className={styles.areaRolagemTabela}>
+
+                        <div className={styles.conteudoTabela} role="table">
+
+                            <div className={`${styles.linhaTabela} ${styles.cabecalhoColunas}`} role="row">
+                                <span>Data / ID</span>
+                                <span>Estabelecimento & descrição</span>
+                                <span>Cartão utilizado</span>
+                                <span>Portador / centro</span>
+                                <span>Comprovante fiscal</span>
+                                <span className={styles.alinhamentoDireita}>Valor total</span>
+                            </div>
+                            {lancamentosRecentes.map((lancamento) =>{
+                                const IconeEstabelecimento = lancamento.icone;
+                                const IconeComprovante = lancamento.tipoComprovante === "pdf" ? FileText : ImageIcon;
+
+                                return(
+                                    <div key={lancamento.id} className={styles.linhaTabela} role="row">
+                                        <span><strong>{lancamento.data}</strong> <small>#{lancamento.id}</small></span>
+                                         
+                                        <span className={styles.estabelecimentoLancamento}>
+                                            <span className={styles.iconeEstabelecimento}> <IconeEstabelecimento size={14}/></span>
+                                            <span><strong>{lancamento.estabelecimento}</strong> <small>{lancamento.descricao}</small></span>
+                                        </span>
+
+                                        <span className={styles.cartaoLancamento}><i className={lancamento.bandeira === "visa" ? styles.indicadorCartaoVisa : styles.indicadorCartaoMastercard}/>{lancamento.bandeira === "visa" ? "Visa" : "Mastercard"}{"••••"} {lancamento.finalCartao}</span>
+
+                                        <span> <strong>{lancamento.portador}</strong> <small>{lancamento.centro}</small></span>
+                                        
+                                        <span><a href="#" className={styles.linkComprovante} onClick={(evento) => evento.preventDefault()}> <IconeComprovante size={11}/> {lancamento.comprovante}</a></span>
+
+                                        <span className={`${styles.alinhamentoDireita} ${styles.valorLancamento}`}>{formatarMoeda(lancamento.valor)}</span>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                    </div>
+                    <footer className={styles.rodapeTabela}>
+                        <span className={styles.statusAuditoria}>Auditoria automática concluída sem pendências de conformidade fiscal.</span>
+                        <span>Ultima sincronização: há 4 minutos</span>
+                    </footer>
+            </section>
         </div>
     )
 }
