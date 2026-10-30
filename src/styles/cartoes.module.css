@@ -1,0 +1,448 @@
+
+.pagina {
+  width: 100%;
+  color: #172238;
+  font-size: 12px;
+}
+
+.topoPagina {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 22px;
+}
+.introducao h1{
+  padding-bottom: 10px;
+}
+.pgAtual {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 11px;
+  color: #7d8799;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.pgAtual span:last-child {
+  color: #315dc7;
+}
+
+.separador {
+  color: #c0c7d3;
+}
+
+.topoPagina h1 {
+  color: #1d293b;
+  font-size: 25px;
+  font-weight: 750;
+  letter-spacing: -0.7px;
+  line-height: 1.25;
+}
+
+.subtitulo {
+  color: #788397;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+
+.statusHeader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: white;
+    padding: 0 10px;
+    box-shadow: 4px 3px 4px rgba(0, 0, 0, 0.226);
+}
+
+.infoAuditoria {
+  margin: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.auditoria {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 23px;
+  padding: 0 10px;
+  border-radius: 20px;
+  background: #edf0ff;
+  color: #35467d;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.pontoVerde {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #159447;
+}
+
+.sincronizacao {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #727b8d;
+  font-size: 9px;
+}
+
+.sincronizacao strong {
+  color: #394255;
+  font-weight: 700;
+}
+
+.abas {
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  margin-bottom: 20px;
+  border: 1px solid #edf0f5;
+  border-radius: 7px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgb(30 45 70 / 3%);
+}
+
+.aba {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 32px;
+  padding: 0 15px;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  color: #5a5a5a;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+
+
+.abaAtiva {
+  padding: 10px;
+  background: #2949bd;
+  color: #fff;
+  font-weight: 600;
+}
+
+.abaAtiva:hover {
+  background: #11256d;
+}
+
+.contador {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 19px;
+  height: 17px;
+  border-radius: 20px;
+  background: #e9edff;
+  color: #5365a7;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.abaAtiva .contador {
+  background: #fff;
+  color: #2949bd;
+}
+
+.painel {
+  overflow: hidden;
+  border: 1px solid #f3f2f2;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 2px 2px 7px rgba(173, 173, 173, 0.445);
+}
+
+.cabecalhoPainel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 76px;
+  padding: 13px 14px;
+}
+
+.tituloPainel {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 0;
+}
+
+.iconeTitulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: #e9edff;
+  color: #173fae;
+}
+
+.tituloPainel h2 {
+  margin: 0;
+  color: #15213a;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.tituloPainel p {
+  margin: 3px 0 0;
+  color: #687185;
+  font-size: 10px;
+}
+
+.botaoNovoCard {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 34px;
+  padding: 0 13px;
+  border:none;
+  border-radius: 4px;
+  background: #0c2e91;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.botaoNovoCard:hover{
+  background-color: #1242d1e7;
+}
+
+.tabelaCartoes {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.tabela thead {
+  background: #f1f2ff;
+}
+
+.tabela th {
+  height: 35px;
+  padding: 0 13px;
+  border-bottom: 1px solid #e9ecf8;
+  color: #45495a;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.tabela td {
+  height: 50px;
+  padding: 7px 13px;
+  border-bottom: 1px solid #e9ecf8;
+  color: #101b32;
+  font-size: 11px;
+  vertical-align: middle;
+}
+
+.tabela tbody tr {
+  background: #fff;
+}
+
+.identificacaoCartao {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #172238;
+  font-size: 11px;
+}
+
+.iconeCartaoLinha {
+  color: #747b8d;
+}
+
+.marcadoresCartao {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.identificacaoCartao strong {
+  color: #172238;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.Visa {
+  width: 50px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.Master {
+  margin-top: 10px;
+  width: 50px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.responsavel {
+  color: #101b32;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.departamento {
+  display: inline-block;
+  padding: 4px 9px;
+  border-radius: 20px;
+  background: #eaedff;
+  color: #2b2f3b;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+
+.valor {
+  color: #101b32;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: "Roboto Mono", monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.saldoValor {
+  color: #0739ae;
+  font-size: 13px;
+  font-weight: 900;
+  font-family: "Roboto Mono", monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 9px;
+  font-weight: 500;
+}
+
+.pontoStatus {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.statusDisponivel {
+  background: #47db76b4;
+  color: #075d2c;
+}
+
+.statusEmUso {
+  background: #fcc6cf;
+  color: #8f2626;
+}
+
+.statusBloqueado {
+  background: #eceef3;
+  color: #515b6c;
+}
+
+.acoes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.botaoAcao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 21px;
+  height: 25px;
+  border: none;
+  background: transparent;
+  color: #74798b;
+  cursor: pointer;
+}
+
+.editar:hover{
+  color: rgb(0, 153, 255);
+}
+
+.bloquear:hover{
+  color: red;
+}
+
+.rodapePainel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  min-height: 34px;
+  padding: 8px 14px;
+  background: #f1f2ff;
+}
+
+.resumo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #42495a;
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.resumo strong {
+  color: #222b3d;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.pontoResumo {
+  color: #444c61;
+}
+
+.totalGlobal {
+  font-family: "Roboto Mono", monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.conformidade {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #626b7d;
+  font-size: 9px;
+}
+
+.rodapePagina {
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 7px;
+  color: #a0a9b7;
+  font-size: 9px;
+}
+
