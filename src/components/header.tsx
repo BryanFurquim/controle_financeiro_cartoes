@@ -1,5 +1,5 @@
 
-import { Building2 } from "lucide-react";
+import { Building2, Bell } from "lucide-react";
 import styles from "../styles/header.module.css";
 
 export default function Header() {
@@ -14,15 +14,21 @@ export default function Header() {
         </div>
       </div>
 
-      <div className={styles.usuario}>
-        <div className={styles.perfil}>EA</div>
+      <div className={styles.acoesHeader}>
 
-        <div className={styles.userInfo}>
-          <strong>Eduardo Amaral</strong>
-          <span className={styles.setor}>Compras</span>
-        </div>
+         <div className={styles.notificacoes}>
+            <Bell size={18}/> <span className={styles.pontoNotificacao}/>
+          </div>
 
-        <span className={styles.UserType}>Administrador</span>
+          <div className={styles.usuario}>
+            <div className={styles.perfil}>EA</div>
+
+            <div className={styles.userInfo}>
+              <strong>Eduardo Amaral</strong> <span className={styles.setor}>Compras</span>
+            </div>
+            <span className={styles.UserType}>Administrador</span>
+
+          </div>
       </div>
     </header>
   );

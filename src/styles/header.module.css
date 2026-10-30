@@ -33,7 +33,43 @@
   font-size: 14px;
   font-weight: 600;
 }
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+  padding: 12px 24px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
 
+.acoesHeader {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.notificacoes {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 20px;
+  border-right: 1px solid #e5e7eb;
+  cursor: pointer;
+  color: #333;
+}
+
+.pontoNotificacao {
+  position: absolute;
+  top: 0;
+  right: 21px;
+  width: 9px;
+  height: 9px;
+  background-color: #bd1a1a;
+  border: 1.5px solid white;
+  border-radius: 50%;
+}
 .usuario {
   display: flex;
   align-items: center;
