@@ -1,0 +1,48 @@
+import { Cartao } from "./cartao";
+
+export const cartoes: Cartao[] = [
+  {
+    id: "1",
+    final: "4587",
+    bandeira: "mastercard",
+    responsavel: "Eduardo Amaral",
+    departamento: "Compras",
+    limite: 5000,
+    gasto: 1250,
+    validade: "09/28",
+    emUso: false,
+  },
+  {
+    id: "2",
+    final: "8912",
+    bandeira: "visa",
+    responsavel: "Mariana Costa",
+    departamento: "Marketing",
+    limite: 4000,
+    gasto: 1620,
+    validade: "11/29",
+    emUso: true,
+  },
+  {
+    id: "3",
+    final: "3140",
+    bandeira: "visa",
+    responsavel: "Carlos Henrique",
+    departamento: "TI",
+    limite: 3500,
+    gasto: 580,
+    validade: "07/28",
+    emUso: true,
+  },
+  {
+    id: "4",
+    final: "7621",
+    bandeira: "mastercard",
+    responsavel: "Beatriz Mendes",
+    departamento: "Diretoria",
+    limite: 2500,
+    gasto: 0,
+    validade: "03/29",
+    emUso: false,
+  },
+];

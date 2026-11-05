@@ -1,20 +1,11 @@
 
 import styles from "../styles/cartaoFinanceiro.module.css";
 import {Nfc, User, Building, ChevronRight} from "lucide-react";
+import Link from "next/link"
+import type { Cartao } from "../types/cartao";
 
 type CartaoFinanceiroProps = {
-  cartao: {
-    id: string;
-    emUso: boolean;
-    bandeira: "mastercard" | "visa";
-    final: string;
-    validade: string;
-    responsavel: string;
-    departamento: string;
-    limite: number;
-    gasto: number;
-    retiradoPor?: string;
-  };
+  cartao: Cartao;
 };
 
 export default function CartaoFinanceiro({cartao}: CartaoFinanceiroProps) {
@@ -89,7 +80,7 @@ export default function CartaoFinanceiro({cartao}: CartaoFinanceiroProps) {
           </div>
         </div>
 
-        <button type="button" className={styles.botaoDetalhes}>Ver detalhes <ChevronRight size={14}/></button>
+        <Link href={`/cartoes/${cartao.id}`}  ><button type="button" className={styles.botaoDetalhes}>Ver detalhes <ChevronRight size={14}/></button> </Link>
       </div>
     </article>
   );

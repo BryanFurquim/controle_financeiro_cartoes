@@ -250,6 +250,7 @@
   font-size: 10px;
   cursor: pointer;
   transition:  .6s ease;
+  text-decoration: none;
 }
 
 .botaoDetalhes:hover {
