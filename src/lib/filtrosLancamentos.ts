@@ -16,9 +16,13 @@ export function filtrarLancamentos(lancamentos: Lancamento[], filtros: FiltrosLa
     
     return lancamentos.filter((lancamento) => {
         const dataLancamento = converterData(lancamento.data);
+
         const dataInicial = !filtros.dataInicial || dataLancamento >= filtros.dataInicial;
+
         const dataFinal = !filtros.dataFinal || dataLancamento <= filtros.dataFinal;
+
         const categoria = !filtros.categoria || lancamento.categoria === filtros.categoria;
+        
         const solicitante = !filtros.solicitante || lancamento.solicitante === filtros.solicitante;
 
         return dataInicial && dataFinal && categoria && solicitante;

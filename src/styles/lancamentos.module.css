@@ -1,0 +1,723 @@
+.paginaLancamentos {
+  width: 100%;
+  color: #17213b;
+  font-family: inherit;
+}
+
+.caminho {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 14px;
+  font-size: 11px;
+  color: #64708a;
+}
+.caminho a:hover {
+  text-decoration: wavy underline;
+  font-weight: 600;
+  color: #052b7c;
+}
+.caminho a, .caminho span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #64708a;
+  text-decoration: none;
+}
+
+.caminhoAtual{
+  font-weight: 700;
+  color:rgb(6, 23, 172) !important;
+}
+
+.iconeAzul {
+  color: #123da9;
+}
+
+.statusModulo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+  color: #30394b;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.statusModulo span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #078b48;
+}
+
+.conteudoLancamento {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px 28px;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.topoFormulario {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.identificacao {
+  color: #1742bd;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.topoFormulario h1 {
+  color: #17213b;
+  margin: 2px 0 0 0;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: -0.7px;
+}
+
+.aprovacao {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 9px;
+  border-radius: 20px;
+  background: #d5dafa;
+  color: #1539a5;
+  font-size: 10px;
+}
+.seletorCartao {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  width: 280px;
+  margin-bottom: 12px;
+}
+
+.seletorCartao label {
+  color: #202a40;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.seletorCartao span{
+  color: #d92738;
+}
+
+.seletorCartao select {
+  height: 36px;
+  padding: 0 10px;
+  border: 1px solid rgba(57, 119, 253, 0.068);
+  border-radius: 8px;
+  background: #f0f1fc;
+  color: #28334b;
+  font-size: 12px;
+  cursor: pointer;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.seletorCartao select option {
+  background: #d3e7f3;
+  color: #28334b;
+}
+
+.cartaoSelecionado {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-height: 70px;
+  padding: 14px 16px;
+  margin-bottom: 58px;
+  border-radius: 7px;
+  background: #cdd6fc;
+  box-sizing: border-box;
+}
+
+.iconeCartao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 6px;
+  background: #2449c5;
+  color: #ffffff;
+}
+
+.dadosCartao {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.linhaCartao {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.linhaCartao strong {
+  font-size: 12px;
+  color: #202b45;
+}
+
+.bandeiraCartao {
+  width: 38px;
+  height: 25px;
+  object-fit: contain;
+}
+
+.tipoCartao {
+  padding: 3px 7px;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #1742bd;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.responsavelCartao {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #66718a;
+  font-size: 10px;
+}
+
+.saldoDisponivel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+  padding: 7px 10px;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.saldoDisponivel div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: right;
+}
+
+.saldoDisponivel span {
+  color: #5d667a;
+  font-size: 9px;
+}
+
+.saldoDisponivel strong {
+  color: #00833e;
+  font-size: 16px;
+}
+
+.iconeSaldo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 27px;
+  height: 27px;
+  border-radius: 7px;
+  background: #65ed91;
+  color: #075f2b;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.caixasResposta {
+  display: grid;
+  grid-template-columns: 1.05fr 1.1fr 0.9fr;
+  gap: 12px;
+}
+
+.caixa {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.caixa label,.tituloCampo label, .tituloComprovante label {
+  color: #202a40;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.caixa label span, .tituloCampo label span, .tituloComprovante label span {
+  color: #d92738;
+}
+
+.caixaSelect select {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #334155;
+  font: inherit;
+  cursor: pointer;
+}
+
+.caixaSelect option{
+  background: #d3e7f3;
+  color: #28334b;
+
+}
+.caixaSelect,
+.caixaValor,
+.caixaData {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 34px;
+  padding: 0 11px;
+  border-radius: 6px;
+  background: #f0f1fc;
+  box-sizing: border-box;
+  color: #28334b;
+  font-size: 12px;
+}
+
+.caixaData input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #28334b;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.caixaSelect {
+  color: #747d92;
+}
+
+.caixaValor {
+  justify-content: flex-start;
+  gap: 9px;
+}
+
+.caixaValor strong {
+  color: #1742bd;
+  font-size: 14px;
+}
+
+.caixaValor input {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #1c2943;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.caixaValor select {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #1c2943;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+
+.caixaValor span {
+  color: #1c2943;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.caixa small {
+  color: #7a8498;
+  font-size: 9px;
+}
+
+.caixa .mensagemSucesso {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #00843e;
+}
+
+.mensagemErro {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #dc2626 !important;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.campoSolicitante {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.tituloCampo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.tituloCampo small {
+  color: #7a8498;
+  font-size: 9px;
+}
+
+.seletorSolicitante {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 37px;
+  padding: 0 12px;
+  background: #f0f1fc;
+  border: 1px solid #dce3ec;
+  border-radius: 7px;
+  box-sizing: border-box;
+  color: #64748b;
+  font-size: 11px;
+}
+
+.seletorSolicitante select {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #334155;
+  font: inherit;
+  cursor: pointer;
+}
+.seletorSolicitante select option {
+  background: #d3e7f3;
+  color: #28334b;
+}
+
+.campoFinalidade {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.areaTexto {
+  min-height: 74px;
+  padding: 12px;
+  border-radius: 6px;
+  background: #f0f1fc;
+  box-sizing: border-box;
+  color: #303b53;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.areaTexto textarea {
+  width: 100%;
+  height: 100%;
+  min-height: 100px;
+  padding: 0;
+  border: none;
+  outline: none;
+  resize: vertical;
+  background: transparent;
+  color: #1c2943;
+  font: inherit;
+  font-size: 12px;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+.areaTexto textarea::placeholder {
+  color: #747d92;
+}
+
+.ajudaCampo {
+  color: #7a8498;
+  font-size: 9px;
+}
+
+.secaoComprovante {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.tituloComprovante {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.tituloComprovante strong {
+  color: #1742bd;
+  font-size: 9px;
+}
+
+.areaUpload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+  padding: 12px;
+  border-radius: 7px;
+  background: #f3f4ff;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.iconeUpload {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  background: #dfe4ff;
+  color: #1742bd;
+}
+
+.areaUpload strong {
+  color: #28334b;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.areaUpload strong span {
+  color: #1742bd;
+  text-decoration: underline;
+}
+
+.areaUpload small {
+  margin-top: 4px;
+  color: #7a8498;
+  font-size: 9px;
+}
+
+.arquivoAnexado {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 7px 10px;
+  border-radius: 6px;
+  background: #e9edff;
+  box-sizing: border-box;
+}
+
+.iconeArquivo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: #ffdddd;
+}
+
+.ver:hover{
+  border-radius: 50%;
+  background-color: #0023834b;
+  color: blue;
+  cursor: pointer;
+}
+
+.excluir:hover{
+  border-radius: 50%;
+  background-color: #f76f6f4b;
+  cursor: pointer;
+}
+.dadosArquivo {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.nomeArquivo {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.nomeArquivo strong {
+  color: #303b53;
+  font-size: 10px;
+}
+
+.statusArquivo {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  padding: 2px 5px;
+  border-radius: 10px;
+  background: #b9f6c8;
+  color: #087b35;
+  font-size: 8px;
+  font-weight: 600;
+}
+
+.dadosArquivo small {
+  color: #7a8498;
+  font-size: 9px;
+}
+
+.dadosArquivo small span {
+  margin: 0 5px;
+}
+
+.acoesArquivo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+}
+
+.acoesArquivo button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+  border: 0;
+  background: transparent;
+  color: #68728a;
+}
+
+.acoesArquivo button:last-child {
+  color: #d92738;
+}
+
+.avisoRegistro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  min-height: 35px;
+  padding: 8px 11px;
+  border-radius: 6px;
+  background: #f0f1fc;
+  box-sizing: border-box;
+}
+
+.informacaoHorario,
+.informacaoUsuario {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #657089;
+  font-size: 9px;
+}
+
+.informacaoUsuario {
+  color: #1742bd;
+}
+
+.informacaoUsuario strong {
+  color: #28334b;
+}
+
+.acoesFormulario {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid #edf0f6;
+}
+
+.botaoCancelar,
+.botaoCadastrar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 36px;
+  padding: 0 18px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.botaoCancelar {
+  border: 1px solid rgb(184, 183, 183);
+  background: transparent;
+  color: #28334b;
+}
+
+.botaoCancelar:hover{
+  border: 1px solid rgba(119, 158, 243, 0.979);
+  background-color: rgb(219, 230, 255);
+  box-shadow: 2px 3px 6px rgb(136, 147, 250);
+}
+
+.botaoCadastrar {
+  min-width: 145px;
+  border: 0;
+  background: #0735a6;
+  color: #ffffff;
+  box-shadow: 0 2px 4px rgba(7, 53, 166, 0.2);
+}
+
+.botaoCadastrar:hover{
+  box-shadow: 2px 3px 6px rgb(136, 147, 250);
+  background-color: #0f48d8;
+
+}
+
+.rodapeLancamento {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 12px 10px;
+  color: #747d92;
+  font-size: 9px;
+}
+
+.rodapeLancamento div,
+.rodapeLancamento a {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.rodapeLancamento a {
+  color: #1742bd;
+  font-weight: 500;
+  text-decoration: none;
+}

@@ -27,14 +27,14 @@ const menuAdministracao = [
     icon: CreditCard,
   },
   {
-    label: "Usuários",
-    href: "/usuarios",
-    icon: Users,
-  },
-  {
     label: "Categorias de gastos",
     href: "/categorias",
     icon: Shapes,
+  },
+   {
+    label: "Usuários",
+    href: "/usuarios",
+    icon: Users,
   }
 ]
 
