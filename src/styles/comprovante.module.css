@@ -1,0 +1,142 @@
+.areaUpload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    padding: 12px;
+    border-radius: 7px;
+    background: #f3f4ff;
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid #1743bd4d;
+    transition: .5s ease;
+}
+
+.iconeUpload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    background: #dfe4ff;
+    color: #1742bd;
+}
+
+.areaUpload strong {
+    color: #28334b;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.selecionarArquivo {
+    color: #1742bd;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.areaUpload small {
+    margin-top: 4px;
+    color: #7a8498;
+    font-size: 9px;
+}
+
+.arrastando {
+    outline: 2px dashed #1742bd;
+    background: #d7ddf8;
+}
+
+.arquivoAnexado {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 46px;
+    padding: 7px 10px;
+    border-radius: 6px;
+    background: #e9edff;
+    box-sizing: border-box;
+}
+
+.iconeArquivo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 5px;
+    background: #ffdddd;
+}
+
+.dadosArquivo {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.nomeArquivo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.nomeArquivo strong {
+    color: #303b53;
+    font-size: 10px;
+}
+
+.statusArquivo {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    padding: 2px 5px;
+    border-radius: 10px;
+    background: #b9f6c8;
+    color: #087b35;
+    font-size: 8px;
+    font-weight: 600;
+}
+
+.dadosArquivo small {
+    color: #7a8498;
+    font-size: 9px;
+}
+
+.acoesArquivo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto;
+}
+
+.acoesArquivo button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+    border: 0;
+    background: transparent;
+    color: #68728a;
+}
+
+.excluir:last-child {
+    color: #d92738;
+}
+
+.excluir:hover {
+    border-radius: 50%;
+    background-color: #f76f6f4b;
+    color: darkred;
+    cursor: pointer;
+}
+
+.ver:hover{
+    border-radius: 50%;
+    background-color: #9bb3f5;
+    color: blue;
+    cursor: pointer;
+}
+.inputArquivo {
+    display: none;
+}

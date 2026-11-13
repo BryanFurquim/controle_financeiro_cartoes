@@ -8,6 +8,7 @@ import { categorias } from "../../../types/categorias"
 import styles from "../../../styles/lancamentos.module.css";
 import { validarLancamento } from "../../../lib/validarLancamento"
 import Image from "next/image";
+import Comprovante from "../../../components/comprovantes"
 
 export default function LancamentosPage() {
 
@@ -21,9 +22,19 @@ export default function LancamentosPage() {
   const valorNumerico = Number(valorCompra)
   const dentroDoLimite = valorNumerico > 0 && valorNumerico <= cartaoSelecionado.limite - cartaoSelecionado.gasto
   const [ mensagemValidacao, setMensagemValidacao] = useState("")
+  const [ comprovante, setComprovante] = useState <File | null>(null)
  
   function validacao(){
-    const erro = validarLancamento({cartaoSelecionadoId,categoriaSelecionada, valorCompra, dataDespesa, beneficiarioSelecionado, finalidade, saldoDisponivel: cartaoSelecionado.limite - cartaoSelecionado.gasto})
+    const erro = validarLancamento({
+      cartaoSelecionadoId,
+      categoriaSelecionada,
+      valorCompra,
+      dataDespesa,
+      beneficiarioSelecionado,
+      finalidade,
+      saldoDisponivel: cartaoSelecionado.limite - cartaoSelecionado.gasto,
+      comprovante
+      })
     
     setMensagemValidacao(erro ?? "")
   }
@@ -209,37 +220,7 @@ export default function LancamentosPage() {
               <strong>Obrigatório para liquidação</strong>
             </div>
 
-            <div className={styles.areaUpload}>
-              <div className={styles.iconeUpload}>
-                <CloudUpload size={22} />
-              </div>
-              <strong>Arraste e solte o comprovante aqui ou{" "}<span>clique para selecionar do computador</span></strong>
-              <small>Formatos permitidos: PDF, JPG e PNG (tamanho máximo 10MB)</small>
-            </div>
-
-            <div className={styles.arquivoAnexado}>
-              <div className={styles.iconeArquivo}>
-                <FileText size={20} />
-              </div>
-
-              <div className={styles.dadosArquivo}>
-                <div className={styles.nomeArquivo}>
-                  <strong>nota_fiscal_restaurante_2209.pdf</strong>
-                  <span className={styles.statusArquivo}><CheckCircle2 size={10} />Anexado com sucesso</span>
-                </div>
-                <small>1.2 MB <span>•</span> Verificado contra duplicação de OCR</small>
-              </div>
-
-              <div className={styles.acoesArquivo}>
-                <button className={styles.ver} type="button" aria-label="Visualizar arquivo">
-                  <Eye size={16} />
-                </button>
-                <button className={styles.excluir} type="button" aria-label="Excluir arquivo">
-                  <Trash2 size={16} />
-                </button>
-              </div>
-
-            </div>
+            <Comprovante onChange={setComprovante}/>
           </div>
 
           <div className={styles.avisoRegistro}>
